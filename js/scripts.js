@@ -11,3 +11,6 @@ let pokemonList = [
     {name: 'Poliwrath', height:1.3, type: ['water', 'fighter']},
     {name: 'Banette', height: 1.1, type: 'ghost'}
 ];
+
+for (let i = 0; i < pokemonList.length; i++) {
+}
