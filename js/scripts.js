@@ -14,7 +14,21 @@ let pokemonRepository = (function () {
         { name: 'Banette', height: 1.1, type: 'ghost' }
     ];
 
-pokemonList.forEach(function(pokemon){
+    function add(pokemon) {
+        pokemonList.push(pokemon);
+    }
+
+    function getAll() {
+        return pokemonList;
+    }
+
+    return {
+        add: add,
+        getAll: getAll
+    }
+})();
+
+pokemonRepository.getAll().forEach(function(pokemon){
     if (pokemon.height > 1.0) {
         document.write(pokemon.name + ' (height:' + pokemon.height + ') - Wow, that\'s big! ');
     } else if (pokemon.height <= 0.5) {
