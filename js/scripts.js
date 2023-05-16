@@ -24,16 +24,6 @@ let pokemonRepository = (function () {
 
     return {
         add: add,
-        getAll: getAll
     }
 })();
 
-pokemonRepository.getAll().forEach(function(pokemon){
-    if (pokemon.height > 1.0) {
-        document.write(pokemon.name + ' (height:' + pokemon.height + ') - Wow, that\'s big! ');
-    } else if (pokemon.height <= 0.5) {
-        document.write(pokemon.name + ' (height:' + pokemon.height + ') - Wow, that\'s tiny! ');
-    } else{
-        document.write(pokemon.name + ' (height:' + pokemon.height + ') ');
-    }
-})
