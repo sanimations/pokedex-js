@@ -21,9 +21,23 @@ let pokemonRepository = (function () {
     function getAll() {
         return pokemonList;
     }
+    function addListItem(pokemon) {
+        let pokemonList = document.querySelector('.pokemon-list');
+        let listItem = document.createElement('li');
+        let button = document.createElement('button');
+        button.innerText = pokemon.name;
+        button.classList.add('pokeClass');
+        pokemonList.appendChild(listItem);  //listItem is child of pokemonList
+        listItem.appendChild(button);  //The newly created button is a CHILD of the LIST!!
+    }
 
     return {
         add: add,
+        getAll: getAll,
+        addListItem: addListItem
     }
 })();
 
+pokemonRepository.getAll().forEach(function (pokemon) {
+    pokemonRepository.addListItem(pokemon);
+    })
