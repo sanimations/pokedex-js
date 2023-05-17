@@ -29,7 +29,7 @@ let pokemonRepository = (function () {
         button.classList.add('pokeClass');  //creates pokeClass to the list items
         pokemonList.appendChild(listItem);  //listItem is child of pokemonList
         listItem.appendChild(button);       //The newly created button is a CHILD of the LIST!!
-        button.addEventListener('click',showDetails(pokemon));    //adds event to button, on click,that shows the details of the pokemon clicked
+        button.addEventListener('click',() => showDetails(pokemon));    //adds event to button, on click,that shows the details of the pokemon clicked
     }
     function showDetails(pokemon){
         console.log(pokemon);
