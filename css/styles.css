@@ -30,6 +30,9 @@
   display: grid;
   text-align: center;
 }
+#show-modal{
+  display: none;
+}
 
 .modal {
   margin: auto;
