@@ -66,7 +66,30 @@ let pokemonRepository = (function () {
         });
     }
     function showModal(pokemon){
-        let modalContainer = document.querySelector('#modal-container');
+        //saving each element inside different variable
+        let modalBody = $(".modal-body");
+        let modalTitle= $(".modal-title");
+        let modalHeader = $(".modal-header");
+        //do i need this? let modalContainer = document.querySelector('#modal-container');  
+        
+        modalTitle.empty();
+        modalBody.empty();
+
+        let nameElement = $("<h1>"+ pokemon.name + "</h1>");
+
+        let imageElementFront = $('<img class="modal-img" style="width:50%">');
+        imageElementFront.attr("src", pokemon.imageUrlFront);
+        let imageElementBack = $('<img class="modal-img" style="width:50%">');
+        imageElementBack.attr("src", pokemon.imageUrlBack);
+        let heightElement = $("<p>" + "height" + pokemon.height + "</p>");
+        let typesElement = $("<p>" + "types: " + pokemon.types + "</p>");
+
+        //appending the variables that grabbed information and added them to the elements already saved
+        modalTitle.append(nameElement);
+        modalBody.append(imageElementFront);
+        modalBody.append(imageElementBack);
+        modalBody.append(heightElement);
+        modalBody.append(typesElement);
       
         //Clear all existing modal content
         modalContainer.innerHTML = '';
