@@ -63,3 +63,9 @@ for (let i = 0; i < pokemonList.length; i++) {
     //     })
     // }
         
+//     <!-- <nav class="navbar navbar-light bg-light">
+//     <a class="navbar-brand" href="https://www.youtube.com/watch?v=0pjsxNSwSSA&t=4758s&ab_channel=GlobalGaming">
+//       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/512px-Pok%C3%A9_Ball_icon.svg.png" width="32" height="32" class="d-inline-block align-top" alt="">
+//       PokeDex
+//     </a>
+//   </nav> -->
