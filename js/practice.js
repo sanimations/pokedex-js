@@ -69,3 +69,11 @@ for (let i = 0; i < pokemonList.length; i++) {
 //       PokeDex
 //     </a>
 //   </nav> -->
+
+//function showModal(pokemon){
+// let modalContainer = document.querySelector('#modal-container'); 
+// Clear all existing modal content
+// modalContainer.innerHTML = '';
+      
+// let modal = document.createElement('div');
+// modal.classList.add('modal');
