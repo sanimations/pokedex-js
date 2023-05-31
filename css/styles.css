@@ -37,17 +37,6 @@ body{
   display: none;
 }
 
-.modal {
-  margin: auto;
-  display: inline-block;
-  box-sizing: border-box;
-  background: #fff;
-  padding: 15px;
-  width: 100%;
-  max-width: 700px;
-  text-align: left;
-}
-
 .modal-close {
   float: right;
   -webkit-appearance: none;
@@ -55,7 +44,7 @@ body{
   background: none;
   color: #777;
   text-decoration: underline;
-  margin-top:60px;
+  margin-top:auto;
 }
 
 .modal h1 {

@@ -77,3 +77,14 @@ for (let i = 0; i < pokemonList.length; i++) {
       
 // let modal = document.createElement('div');
 // modal.classList.add('modal');
+
+/* .modal {
+  margin: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+} */
