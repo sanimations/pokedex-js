@@ -41,9 +41,10 @@ let pokemonRepository = (function () {
             //This one takes the parameter details and goes into each details url in the api
             //first you find the sprite in the pokemon's details, then height, then types
         }).then(function(details){
-            item.imageUrl = details.sprites.front_default;
+            item.frontSprite = details.sprites.front_default;
             item.height = details.height;
-            item.types = details.types;
+            item.types = JSON.stringify(details.types);
+            item.backSprite = details.sprites.back_default;
         }).catch(function(e){
             console.error(e);
         });
@@ -54,7 +55,10 @@ let pokemonRepository = (function () {
         let listItem = document.createElement('li');
         let button = document.createElement('button');
         button.innerText = pokemon.name;
-        button.classList.add('pokeClass');  //creates pokeClass to the list items
+        listItem.classList.add('list-group-item');
+        button.classList.add('pokeClass', 'btn');  //creates pokeClass and btn to the list items
+        button.setAttribute("data-toggle", "modal")
+        button.setAttribute("data-target", "#exampleModal")
         pokemonList.appendChild(listItem);  //listItem is child of pokemonList
         listItem.appendChild(button);       //The newly created button is a CHILD of the LIST!!
         button.addEventListener('click',() => showDetails(pokemon));    //adds event to button, on click,that shows the details of the pokemon clicked
@@ -70,7 +74,7 @@ let pokemonRepository = (function () {
         let modalBody = $(".modal-body");
         let modalTitle= $(".modal-title");
         let modalHeader = $(".modal-header");
-        //do i need this? let modalContainer = document.querySelector('#modal-container');  
+        let modalContainer = document.querySelector('#modal-container');  
         
         modalTitle.empty();
         modalBody.empty();
@@ -78,11 +82,11 @@ let pokemonRepository = (function () {
         let nameElement = $("<h1>"+ pokemon.name + "</h1>");
 
         let imageElementFront = $('<img class="modal-img" style="width:50%">');
-        imageElementFront.attr("src", pokemon.imageUrlFront);
+        imageElementFront.attr("src", pokemon.frontSprite);
         let imageElementBack = $('<img class="modal-img" style="width:50%">');
-        imageElementBack.attr("src", pokemon.imageUrlBack);
-        let heightElement = $("<p>" + "height" + pokemon.height + "</p>");
-        let typesElement = $("<p>" + "types: " + pokemon.types + "</p>");
+        imageElementBack.attr("src", pokemon.backSprite);
+        let heightElement = $("<p>" + "Height: " + pokemon.height + "</p>");
+        let typesElement = $("<p>" + "Types: " + pokemon.types + "</p>");
 
         //appending the variables that grabbed information and added them to the elements already saved
         modalTitle.append(nameElement);
@@ -107,7 +111,8 @@ let pokemonRepository = (function () {
         titleElement.innerText = pokemon.name;
       
         let contentElement=document.createElement('img');
-        contentElement.src = pokemon.imageUrl;
+        contentElement.src = pokemon.frontSprite;
+        contentElement.src = pokemon.backSprite;
         
         modal.appendChild(closeButtonElement);
         modal.appendChild(titleElement);
@@ -118,7 +123,7 @@ let pokemonRepository = (function () {
         modalContainer.classList.add('is-visible');
       
         modalContainer.addEventListener('click', (e) => {
-        //Since this is also triggered when clicking inside the modal we only want to close if the user clicks directly on the overlay
+                     //Since this is also triggered when clicking inside the modal we only want to close if the user clicks directly on the overlay
           let target = e.target;
           if (target === modalContainer){
             hideModal();
