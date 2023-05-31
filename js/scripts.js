@@ -56,7 +56,7 @@ let pokemonRepository = (function () {
         let button = document.createElement('button');
         button.innerText = pokemon.name;
         listItem.classList.add('list-group-item');
-        button.classList.add('pokeClass', 'btn');  //creates pokeClass and btn to the list items
+        button.classList.add('pokeClass', 'btn', "col-4");  //creates pokeClass and btn to the list items
         button.setAttribute("data-toggle", "modal")
         button.setAttribute("data-target", "#exampleModal")
         pokemonList.appendChild(listItem);  //listItem is child of pokemonList
