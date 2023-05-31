@@ -88,3 +88,57 @@ for (let i = 0; i < pokemonList.length; i++) {
   max-width: 700px;
   text-align: left;
 } */
+
+/* .modal-close {
+  float: right;
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  color: #777;
+  text-decoration: underline;
+  margin-top:auto;
+} */
+
+/* .modal h1 {
+  margin-top: 60px;
+} */
+
+/* .modal p {
+  margin-bottom: 0;
+} */
+
+/* .pokeClass{
+    color: #f5ccd4;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-color: #c9def4;
+    background-color: #764E7E;
+    text-align: center;
+    padding: 2%;
+    width: 15%;
+} */
+/* #modal-container{
+  display: none;
+} */
+/* #modal-container.is-visible {
+  position: fixed;
+  padding: 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  
+  /* to show it above other content */
+//   z-index: 999; 
+  
+  /* to allow scrolling if the screen is not high enough*/
+//   overflow: auto; 
+  
+  /* this is used to center the modal */
+//   display: grid;
+//   text-align: center;
+// } */
+/* #show-modal{
+  display: none;
+} */
