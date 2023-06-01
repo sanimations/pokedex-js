@@ -41,14 +41,14 @@ let pokemonRepository = (function () {
             //This one takes the parameter details and goes into each details url in the api
             //first you find the sprite in the pokemon's details, then height, then types
         }).then(function (details) {
-            let types;
+            let types = "";
             item.frontSprite = details.sprites.front_default;
             item.height = details.height;
             //loop through types since it is an array of objects
             details.types.forEach(function (item) {
-                types += '${item.type.name}, ';
+                types += `${item.type.name} `;
             });
-            details.types = types;
+            item.types = types;
             item.backSprite = details.sprites.back_default;
         }).catch(function (e) {
             console.error(e);
