@@ -1,0 +1,1 @@
+.pokemon-list{list-style-type:none;display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:auto;border-style:none;background:#e1d7c6}.navbar{background-color:#f8f4ea;border:3px solid #f8f4ea}.list-group-item{background-color:#579bb1;border:none}.btn{color:#000;background-color:#e1d7c6;width:100%;border:2px solid #000}body{margin-top:60px}
