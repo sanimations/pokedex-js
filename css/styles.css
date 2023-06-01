@@ -1,6 +1,10 @@
 .pokemon-list {
   list-style-type: none;
   display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  border-style: none;
+  background: #f5ccd4;
 }
 .list-group-item {
   background-color: #f5ccd4;
