@@ -41,7 +41,7 @@ let pokemonRepository = (function () {
             //This one takes the parameter details and goes into each details url in the api
             //first you find the sprite in the pokemon's details, then height, then types
         }).then(function (details) {
-            let types = "";
+            let types = '';
             item.frontSprite = details.sprites.front_default;
             item.height = details.height;
             //loop through types since it is an array of objects
@@ -62,8 +62,8 @@ let pokemonRepository = (function () {
         button.innerText = pokemon.name;
         listItem.classList.add('list-group-item');
         button.classList.add('pokeClass', 'btn');  //creates pokeClass and btn to the list items
-        button.setAttribute("data-toggle", "modal")
-        button.setAttribute("data-target", "#exampleModal")
+        button.setAttribute('data-toggle', 'modal')
+        button.setAttribute('data-target', '#exampleModal')
         pokemonList.appendChild(listItem);  //listItem is child of pokemonList
         listItem.appendChild(button);       //The newly created button is a CHILD of the LIST!!
         button.addEventListener('click', () => showDetails(pokemon));    //adds event to button, on click,that shows the details of the pokemon clicked
@@ -76,22 +76,21 @@ let pokemonRepository = (function () {
     }
     function showModal(pokemon) {
         //saving each element inside different variable
-        let modalBody = $(".modal-body");
-        let modalTitle = $(".modal-title");
-        let modalHeader = $(".modal-header");
+        let modalBody = $('.modal-body');
+        let modalTitle = $('.modal-title');
         let modalContainer = document.querySelector('#modal-container');
 
         modalTitle.empty();
         modalBody.empty();
 
-        let nameElement = $("<h1>" + pokemon.name + "</h1>");
+        let nameElement = $('<h1>' + pokemon.name + '</h1>');
 
         let imageElementFront = $('<img class="modal-img" style="width:50%">');
-        imageElementFront.attr("src", pokemon.frontSprite);
+        imageElementFront.attr('src', pokemon.frontSprite);
         let imageElementBack = $('<img class="modal-img" style="width:50%">');
-        imageElementBack.attr("src", pokemon.backSprite);
-        let heightElement = $("<p>" + "Height: " + pokemon.height + "</p>");
-        let typesElement = $("<p>" + "Types: " + pokemon.types + "</p>");
+        imageElementBack.attr('src', pokemon.backSprite);
+        let heightElement = $('<p>' + 'Height: ' + pokemon.height + '</p>');
+        let typesElement = $('<p>' + 'Types: ' + pokemon.types + '</p>');
 
         //appending the variables that grabbed information and added them to the elements already saved
         modalTitle.append(nameElement);
@@ -137,7 +136,7 @@ let pokemonRepository = (function () {
     }
 
     document.querySelector('#show-modal').addEventListener('click', () => {
-        showModal(pokemon);
+        showModal();
     });
 
     function hideModal() {
