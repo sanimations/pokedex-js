@@ -1,10 +1,44 @@
-Web application to see different Pokemon and get their information.
-Once loaded, you can click on any pokemon you'd like to see their name, height and types
-Project uses HTML, CSS, JavaScript, jQuery, Bootstrap, ESLint
-This project uses the pokedex api: 'https://pokeapi.co/api/v2/pokemon/?limit=150'
+# Pokédex App
 
-I created a working pokedex by linking a public api to the project and created the modal.
+Pokédex is a web application that allows users to browse and view information about various Pokémon.
 
-I decided to continue with pokemon because I thought it would be less confusing while going ahead, but I would definitely try creating an application with a music API of some sort.
+## Features
 
-I learned much more about debugging and I learned a ton about APIs.  Also, there are many ways to do one thing.  
+- View a list of Pokémon with their names and images.
+- Click on a Pokémon to view more details such as height, types, and sprites.
+- Modal interface for displaying Pokémon details.
+- Integrated navigation bar for easy access to favorite and least favorite Pokémon.
+
+
+## Installation
+
+1. Clone the repository: 
+
+```bash
+git clone <repository-url>
+```
+
+2. Navigate to the project directory: 
+
+```bash
+cd <project-directory>
+```
+
+3.Install dependencies: 
+
+```bash
+npm install
+```
+
+4. Start the development server: 
+
+```bash
+npm start
+```
+
+5. Open your web browser and go to http://localhost:3000 to use the app.
+
+## Notes
+
+- This app utilizes the Pokémon API ([pokeapi.co](https://pokeapi.co)) to fetch data about Pokémon.
+- Images and other data are fetched dynamically from the API.
